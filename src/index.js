@@ -15,7 +15,7 @@ const client = new Client({
 
 client.on('ready', (c) =>{
     client.user.setActivity({
-        name: '!p commands || Pengu'
+        name: 'Pengu'
     })
     console.log('bot on bro')
 });
@@ -59,6 +59,9 @@ client.on('interactionCreate', async (interaction) => {
         } else {
             await threadChannel.send(`${finalResultMessage}\n${user}`);
         }
+    }
+    if (interaction.commandName === 'about'){
+        interaction.reply('Hello comrade! I am Secretary, hired by the glorius leader ``pengu211`` and great contributer ``mattphantastic``\n# Commands\n```/create-agenda {Title} {Agenda} {Invite} {Timestamp}```')
     }
 });
 

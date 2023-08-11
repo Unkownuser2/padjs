@@ -3,6 +3,12 @@ const { REST, Routes, ApplicationCommandOptionType } = require('discord.js');
 
 const commands = [
     {
+        name: 'about',
+        description: 'about',
+    },
+    
+    
+    {
         name: 'create-agenda',
         description: 'Creates an Agenda',
         options: [
