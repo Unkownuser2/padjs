@@ -1,0 +1,8 @@
+{
+  "bracketSameLine": true,
+  "printWidth": 120,
+  "proseWrap": "preserve",
+  "quoteProps": "consistent",
+  "tabWidth": 2,
+  "singleQuote": true
+}
