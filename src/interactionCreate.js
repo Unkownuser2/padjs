@@ -1,7 +1,7 @@
 import { InteractionType } from 'discord.js';
 import { discardLastWord, splitPascalCase } from './utils/utils.js';
 import { meetCommand } from './commands/meet.js';
-import { handleMeetingSubmission } from './handlers/meetingSubmission.js';
+import { handleMeetingSubmission } from './handlers/submitMeeting.js';
 
 export const interactionCreate = async (interaction) => {
   const incomingLogMessage = 'Incoming ' + splitPascalCase(InteractionType[interaction.type]).toLowerCase();
