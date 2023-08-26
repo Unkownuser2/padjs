@@ -1,5 +1,6 @@
 import { config } from 'dotenv';
 import { Client, IntentsBitField, SlashCommandBuilder, REST, Routes } from 'discord.js';
+import { interactionCreate } from './interactionCreate.js';
 
 config();
 
@@ -37,6 +38,8 @@ const rest = new REST().setToken(TOKEN);
 
     await client.login(TOKEN);
     console.log('Logged in the client');
+
+    client.on('interactionCreate', interactionCreate);
   } catch (error) {
     console.error('An unexpected error occured, quitting...');
     console.error('________________________________________');
